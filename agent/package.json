@@ -1,0 +1,14 @@
+{
+  "name": "netcompare-agent",
+  "version": "1.0.0",
+  "description": "NetCompare volunteer measurement agent",
+  "type": "commonjs",
+  "main": "src/agent.js",
+  "scripts": {
+    "start": "node src/agent.js",
+    "test-once": "node src/agent.js --once"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
