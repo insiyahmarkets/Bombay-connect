@@ -9,11 +9,10 @@ import type {
 } from '../types';
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: `${import.meta.env.VITE_API_URL}/api`,
   timeout: 10000,
   headers: { 'Content-Type': 'application/json' },
 });
-
 // ------ Health ------
 export async function checkHealth(): Promise<{ status: string; db: string; uptime_seconds: number }> {
   const res = await api.get('/health');
