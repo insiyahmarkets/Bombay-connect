@@ -13,6 +13,7 @@ const api = axios.create({
   timeout: 10000,
   headers: { 'Content-Type': 'application/json' },
 });
+
 // ------ Health ------
 export async function checkHealth(): Promise<{ status: string; db: string; uptime_seconds: number }> {
   const res = await api.get('/health');
